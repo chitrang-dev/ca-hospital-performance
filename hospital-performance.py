@@ -104,7 +104,7 @@ with tab4:
     pd_df4 = load_data("HOSPITAL_DB.PUBLIC.VW_HOSP_DTL")
     hosp_list = pd_df4.sort_values(by="HOSPITAL").HOSPITAL.unique()
     hosp_to_filter = st.selectbox('Select a Hospital:', hosp_list)
-    st.write("County: " + pd_df4.iloc[1][1])
+    #st.write("County: " + pd_df4.iloc[1][1])
 
     st.subheader("Acute Stroke")
     pd_df4_hs= pd_df4[pd_df4.HOSPITAL.eq(hosp_to_filter) & pd_df4.PROCEDURE.eq("Acute Stroke")]
