@@ -1,4 +1,4 @@
 pandas
 streamlit
 snowflake-snowpark-python
--r https://github.com/snowflakedb/snowflake-connector-python/blob/main/tested_requirements/requirements_38.reqs
+-r https://raw.githubusercontent.com/snowflakedb/snowflake-connector-python/main/tested_requirements/requirements_38.reqs
