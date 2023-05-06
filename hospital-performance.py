@@ -61,11 +61,11 @@ with tab2:
     proc_list = pd_df2_top.sort_values(by='PROCEDURE').PROCEDURE.unique()
     proc_to_filter = st.selectbox('Select a Procedure:', proc_list, index=2)
 
-    st.subheader('Best performing hositals with the lowest Risk Adjusted Mortality')
+    st.subheader('Best performing hositals: Lowest Risk Adjusted Mortality')
     top_hosp = pd_df2_top[pd_df2_top.PROCEDURE.eq(proc_to_filter) & pd_df2_top.HOSPITAL_RATING.eq('Better')]
     st.dataframe(top_hosp[["HOSPITAL","COUNTY","RISK_ADJ_MORTALITY"]],use_container_width=True)
 
-    st.subheader('Worst performing hositals with the highest Risk Adjusted Mortality')
+    st.subheader('Worst performing hositals: Highest Risk Adjusted Mortality')
     bottom_hosp = pd_df2_top[pd_df2_top.PROCEDURE.eq(proc_to_filter) & pd_df2_top.HOSPITAL_RATING.eq('Worse')].sort_values(by="RISK_ADJ_MORTALITY", ascending=False)
     st.dataframe(bottom_hosp[["HOSPITAL","COUNTY","RISK_ADJ_MORTALITY"]],use_container_width=True)
 
