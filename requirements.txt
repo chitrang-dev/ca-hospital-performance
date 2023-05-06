@@ -1,3 +1,2 @@
 pandas
-snowflake-snowpark-python
 -r https://raw.githubusercontent.com/snowflakedb/snowflake-connector-python/main/tested_requirements/requirements_38.reqs
